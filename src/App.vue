@@ -1,30 +1,35 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <Menu />
   <router-view/>
+  <!-- <Footer /> -->
 </template>
 
+<script lang="ts" setup>
+import Menu from '@/components/Menu.vue'
+import Footer from '@/components/Footer.vue'
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url(@/assets/css/reset.css);
+@import url(@/assets/css/colors.css);
+
+body.overflow-hidden {
+    overflow: hidden;
 }
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+.container {
+  max-width: 1480px;
+  width: 100%;
+  margin: 0 auto;
+  @media (max-width: 992px) {
+    max-width: 750px;
   }
+  @media (max-width: 768px) {
+    max-width: 400px;
+  }
+}
+
+.full-menu {
+  overflow: hidden;
 }
 </style>
