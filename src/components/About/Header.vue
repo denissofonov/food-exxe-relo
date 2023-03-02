@@ -21,5 +21,8 @@
     justify-content: flex-end;
     gap: 50px;
     padding: 30px 100px 0px 0px;
+    @media (max-width: 992px) {
+                display: none
+            }
 }
 </style>

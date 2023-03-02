@@ -1,17 +1,15 @@
 <template>
     <div class="information">
-        <div class="information__box">
-                <h2 class="information__subtitle">
-                    {{ props.subtitle }}
-                </h2>
-                <div class="information__bottom">
-                    <h1 class="information__title">
-                        {{ props.title }}
-                    </h1>
-                    <div class="information__description">
-                        <slot/>
-                    </div>
-                </div>
+        <h2 class="information__subtitle">
+            {{ props.subtitle }}
+        </h2>
+        <div class="information__bottom">
+            <h1 class="information__title">
+                {{ props.title }}
+            </h1>
+            <div class="information__description">
+                <slot/>
+            </div>
         </div>
     </div>
 </template>
@@ -27,7 +25,7 @@ const props = defineProps({
 <style lang="scss" scoped>
 .information {
     color: var(--black);
-    width: 1076px;
+    max-width: 1076px;
     &__subtitle {
         display: inline-flex;
         align-items: center;
@@ -36,6 +34,12 @@ const props = defineProps({
         line-height: 28px;
         font-weight: 700;
         white-space: nowrap;
+        @media (max-width: 1313px) {
+            margin-left: 100px
+        }
+        @media (max-width: 992px) {
+            display: none;
+        }
     }
     &__subtitle:after{
         width:60px; 
@@ -49,18 +53,32 @@ const props = defineProps({
         align-items: flex-start;
         justify-content: space-between;
         gap: 50px;
+        @media (max-width: 992px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 140px;
+        }
     }
     &__title {
         font-weight: 700;
         font-size: 50px;
         line-height: 78px;
-        width: 200px;
+        max-width: 200px;
+        @media (max-width: 992px) {
+            max-width: 500px;
+            text-align: center;
+        }
     }
     &__description {
-        width: 526px;
+        max-width: 526px;
         font-size: 18px;
         line-height: 25px;
         align-self: flex-end;
+        @media (max-width: 992px) {
+            align-self: center;
+            text-align: center;
+        }
     }
 }
 </style>

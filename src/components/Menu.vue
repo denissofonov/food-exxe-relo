@@ -49,7 +49,7 @@ const toggleShowMenu = () => {
     flex-direction: column;
     justify-content: space-between;
     width: 120px;
-    height: 100vh;
+    height: 100%;
     background-color: var(--background-2);
     padding: 30px 0;
     transition: width 1s;

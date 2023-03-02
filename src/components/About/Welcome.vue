@@ -1,7 +1,7 @@
 <template>
     <div class="welcome">
         <Header />
-        <div class="welcome__title">Видовой ресторан Food Exxe Relo на Крестовском острове</div>
+        <span class="welcome__title">Видовой ресторан Food Exxe Relo на Крестовском острове</span>
     </div>
 </template>
 
@@ -23,7 +23,11 @@ import Header from '@/components/About/Header.vue'
             line-height: 76px;
             position: absolute;
             bottom: 220px;
-            left: 320px;
+            left: 240px;
+            @media (max-width: 992px) {
+                font-size: 34px;
+                width: 400px;
+            }
         }
     }
 </style>
