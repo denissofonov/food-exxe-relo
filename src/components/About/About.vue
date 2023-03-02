@@ -12,10 +12,10 @@
                         At faucibus nullam mauris vitae ut non. Augue libero non nibh nec, et eget erat. Nascetur nunc neque, varius massa aliquam interdum turpis massa. Ac tortor aliquam risus, interdum nisl mauris sit. Ut placerat fermentum pellentesque ac at. Vitae venenatis faucibus urna mi eget vitae quam eu. Euismod sed mauris id turpis iaculis. Erat rutrum dolor, vitae morbi.
                         Nunc cras cras aliquet blandit faucibus massa sagittis semper. 
                     </Information>
-                    <div class="about__pictures">
+                    <!-- <div class="about__pictures">
                         <Picture text='Основное меню' :src='require("@/assets/image/image-1.png")'/>
                         <Picture text='Барная карта' :src='require("@/assets/image/image-2.png")'/>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="about__delivery">
                     <Information title="Служба доставки" subtitle="Доставка">
@@ -27,10 +27,10 @@
                     </div>
                 </div>
             </div>
-            <div class="about__contacts">
+            <!-- <div class="about__contacts">
                 <Information subtitle="Контакты"></Information>
                 <Contacts />
-            </div>
+            </div> -->
         </div>
     </div>
 </template>

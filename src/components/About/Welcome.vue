@@ -16,7 +16,7 @@ import Header from '@/components/About/Header.vue'
         background-repeat: no-repeat;
         background-size: cover;
         &__title {
-            width: 800px;
+            max-width: 800px;
             font-size: 54px;
             font-weight: 700;
             color: var(--white);
@@ -26,7 +26,12 @@ import Header from '@/components/About/Header.vue'
             left: 240px;
             @media (max-width: 992px) {
                 font-size: 34px;
-                width: 400px;
+                max-width: 400px;
+                left: 200px;
+            }
+            @media (max-width: 604px) {
+                max-width: 300px;
+                left: 160px;
             }
         }
     }
