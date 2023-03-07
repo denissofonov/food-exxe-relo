@@ -29,9 +29,14 @@ import Header from '@/components/About/Header.vue'
                 max-width: 400px;
                 left: 200px;
             }
+            @media (max-width: 769px) {
+                left: 100px;
+                bottom: 60px;
+            }
             @media (max-width: 604px) {
                 max-width: 300px;
-                left: 160px;
+                left: 90px;
+                bottom: 40px;
             }
         }
     }

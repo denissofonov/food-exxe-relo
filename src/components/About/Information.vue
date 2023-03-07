@@ -57,13 +57,19 @@ const props = defineProps({
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 0 140px;
+            padding: 0 20px;
         }
         @media (max-width: 604px) {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 0 100px;
+            padding: 0 40px;
+        }
+        @media (max-width: 528px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
         }
     }
     &__title {

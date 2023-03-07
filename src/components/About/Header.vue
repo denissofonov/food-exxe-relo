@@ -23,6 +23,6 @@
     padding: 30px 100px 0px 0px;
     @media (max-width: 769px) {
                 display: none
-            }
+    }
 }
 </style>

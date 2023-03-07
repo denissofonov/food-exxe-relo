@@ -12,10 +12,10 @@
                         At faucibus nullam mauris vitae ut non. Augue libero non nibh nec, et eget erat. Nascetur nunc neque, varius massa aliquam interdum turpis massa. Ac tortor aliquam risus, interdum nisl mauris sit. Ut placerat fermentum pellentesque ac at. Vitae venenatis faucibus urna mi eget vitae quam eu. Euismod sed mauris id turpis iaculis. Erat rutrum dolor, vitae morbi.
                         Nunc cras cras aliquet blandit faucibus massa sagittis semper. 
                     </Information>
-                    <!-- <div class="about__pictures">
+                    <div class="about__pictures">
                         <Picture text='Основное меню' :src='require("@/assets/image/image-1.png")'/>
                         <Picture text='Барная карта' :src='require("@/assets/image/image-2.png")'/>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="about__delivery">
                     <Information title="Служба доставки" subtitle="Доставка">
@@ -27,10 +27,10 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="about__contacts">
+            <div class="about__contacts">
                 <Information subtitle="Контакты"></Information>
                 <Contacts />
-            </div> -->
+            </div>
         </div>
     </div>
 </template>
@@ -41,11 +41,16 @@ import Information from '@/components/About/Information.vue'
 import Picture from '@/components/Picture.vue'
 import Contacts from '@/components/About/Contacts.vue'
 import Button from '@/components/ui/Button.vue'
+import Test from '@/components/Test.vue'
+
 </script>
 
 <style lang="scss" scoped>
 .about {
     margin-left: 120px;
+    @media (max-width: 769px) {
+        margin-left: 0
+    }
     &__box-information {
         display: flex;
         flex-direction: column;
@@ -55,10 +60,16 @@ import Button from '@/components/ui/Button.vue'
     }
     &__pictures {
         display: flex;
-        gap: 24px;
         justify-content: center;
+        gap: 24px;
         margin-top: 80px;
         padding: 0 80px 0 0;
+        @media (max-width: 1112px) {
+            margin: 80px 0 0 0;
+            padding: 0;
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__delivery {
         display: flex;
@@ -66,17 +77,23 @@ import Button from '@/components/ui/Button.vue'
         gap: 60px;
     }
     &__buttons {
-        padding: 0 0 0 56px;
+        padding: 0 0 0 36px;
         display: flex;
         aling-center: center;
         justify-content: center;
-        gap: 30px
+        gap: 30px;
+        @media (max-width: 992px) {
+            padding: 0
+        }
     }
     &__contacts {
         margin-top: 150px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media (max-width: 906px) {
+            margin-top: 40px;
+        }
     }
 }
 </style>

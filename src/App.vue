@@ -1,12 +1,17 @@
 <template>
   <Menu />
   <router-view/>
-  <!-- <Footer /> -->
+  <Footer />
 </template>
 
 <script lang="ts" setup>
 import Menu from '@/components/Menu.vue'
 import Footer from '@/components/Footer.vue'
+import { invoke } from '@tauri-apps/api'
+function App() {
+  invoke('greet', { name: 'World' })
+    .then((response) => console.log(response))
+}
 </script>
 
 <style lang="scss">

@@ -31,7 +31,6 @@ import { ref } from 'vue'
 const showMenu = ref(false)
 const toggleShowMenu = () => {
     showMenu.value = !showMenu.value
-    console.log('toggle')
     if (showMenu.value) {
         document.body.className = 'overflow-hidden'
     } else {
@@ -52,15 +51,24 @@ const toggleShowMenu = () => {
     height: 100%;
     background-color: var(--background-2);
     padding: 30px 0;
-    transition: width 1s;
+    transition: width 1s, height 1s;
     z-index: 100;
     position: fixed;
+    @media (max-width: 769px) {
+        width: 100%;
+        height: 66px;
+        flex-direction: row;
+        padding: 0 50px;
+    }
     &__top {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 30px;
+        @media (max-width: 769px) {
+            flex-direction: row;
+        }
     }
     &__logo-icon {
         width: 73px;
@@ -72,6 +80,16 @@ const toggleShowMenu = () => {
         display: flex;
         flex-direction: column;
         gap: 40px;
+        @media (max-width: 769px) {
+            flex-direction: row;
+        }
+    }
+    &.full-menu {
+        @media (max-width: 769px) {
+            height: 100vh;
+            flex-direction: column;
+            padding: 40px 0;
+        }
     }
     &.full-menu &__bottom {
         justify-content: center;
